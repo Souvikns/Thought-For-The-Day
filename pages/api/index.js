@@ -10,10 +10,8 @@ module.exports = async (req, res) => {
 		const img = await textToImage.generate(quote.getRandomQuote(), {
 			maxWidth: 800
 		});
-		ImageDataURI.outputFile(img, './quote.png');
 
-
-		return res.send(fs.readFileSync('./quote.png'));
+		return res.send(ImageDataURI.decode(img).dataBuffer);
 	} catch (error) {
 		return res.send(error);
 	}
