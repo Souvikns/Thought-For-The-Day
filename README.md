@@ -1,3 +1,3 @@
 # Thought-For-The-Day
 
-<img src="https://steadfast-enchanting-mantis.glitch.me/?" />
+[![Thought for the day](https://steadfast-enchanting-mantis.glitch.me/?)](#)
