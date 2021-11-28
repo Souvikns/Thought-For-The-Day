@@ -13,5 +13,6 @@ export default async (req, res) => {
         textColor: '#11324D',
         margin: 40
     });
-    return res.send(ImageDataURI.decode(img).dataBuffer);
+    res.send(ImageDataURI.decode(img).dataBuffer);
+    return res.end();
 }
