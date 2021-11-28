@@ -7,25 +7,28 @@ const ImageDataURI = require('image-data-uri');
 
 const app = express();
 
-app.get('/', async (req, res) => {
-	try {
-		res.setHeader("content-type", "image/png");
-		res.setHeader("Cache-Control", "No-Store")
-		const img = await textToImage.generate(quote.getRandomQuote(), {
-			maxWidth: 800,
-			fontSize: 28,
-			fontWeight: 'bold',
-			textAlign: 'center',
-			textColor: '#11324D',
-			margin: 40
-		});
+// app.get('/', async (req, res) => {
+// 	try {
+// 		res.setHeader("content-type", "image/png");
+// 		res.setHeader("Cache-Control", "No-Store")
+// 		const img = await textToImage.generate(quote.getRandomQuote(), {
+// 			maxWidth: 800,
+// 			fontSize: 28,
+// 			fontWeight: 'bold',
+// 			textAlign: 'center',
+// 			textColor: '#11324D',
+// 			margin: 40
+// 		});
 
-		return res.send(ImageDataURI.decode(img).dataBuffer);
-	} catch (error) {
-		return res.send(error);
-	}
+// 		return res.send(ImageDataURI.decode(img).dataBuffer);
+// 	} catch (error) {
+// 		return res.send(error);
+// 	}
+// })
+
+app.get('/',(req,res) => {
+	return res.send("Hello World");
 })
-
 
 const port = process.env.PORT || 3000;
 
