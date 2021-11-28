@@ -1,5 +1,5 @@
 import quote from 'inspirational-quotes';
-import {generate} from 'text-to-image';
+import { generate } from 'text-to-image';
 import ImageDataURI from 'image-data-uri';
 
 export default async (req, res) => {
