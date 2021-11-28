@@ -2,7 +2,7 @@ const quote = require('inspirational-quotes');
 const textToImage = require('text-to-image');
 const ImageDataURI = require('image-data-uri');
 
-export default async function handler(req, res) {
+module.exports = async (req, res) => {
     res.setHeader('content-type', "image/png");
     res.setHeader('Cace-Control', 'No-Store');
     const img = await textToImage.generate(quote.getRandomQuote(), {
