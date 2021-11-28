@@ -10,6 +10,7 @@ const app = express();
 app.get('/', async (req, res) => {
 	try {
 		res.setHeader("content-type", "image/png");
+		res.setHeader("Cache-Control", "No-Store")
 		const img = await textToImage.generate(quote.getRandomQuote(), {
 			maxWidth: 800,
 			fontSize: 28,
@@ -25,4 +26,7 @@ app.get('/', async (req, res) => {
 	}
 })
 
-module.exports = app
+
+const port = process.env.PORT || 3000;
+
+app.listen(port, () => console.log(`Server started on port ${port}`));
