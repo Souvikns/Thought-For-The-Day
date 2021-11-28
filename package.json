@@ -4,11 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -25,9 +21,7 @@
     "canvas": "^2.8.0",
     "image-data-uri": "^1.0.0",
     "inspirational-quotes": "^1.0.8",
-    "next": "^12.0.4",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
     "text-to-image": "^4.0.0"
   }
+
 }
